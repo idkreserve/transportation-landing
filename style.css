@@ -448,6 +448,8 @@ h6 {
 
 .main__about {}
 
+.main__map {}
+
 /* ---WELCOME--------- */
 .welcome {
     padding-block: 155px 210px;
@@ -709,8 +711,9 @@ h6 {
 .main__about {}
 
 .about {
-    position: relative;
-    padding-block: 80px;
+    /* position: relative; */
+    padding-top: 80px;
+    padding-bottom: 200px;
 }
 
 .about__container {}
@@ -719,21 +722,31 @@ h6 {
 
 .about__body {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     column-gap: 65px;
 }
 
+.about__body::before {
+    top: auto;
+    height: calc(100% + 160px);
+}
+
 .body-block_alternative {}
 
-.about__content-title {}
+.about__content-title {
+    z-index: 1;
+}
 
 .about__content-title .content-title__text {
     font-size: 16px;
     max-width: 445px;
 }
 
-.about__statistic {}
+.about__statistic {
+    z-index: 1;
+}
 
 .about__list {
     display: grid;
@@ -810,6 +823,10 @@ h6 {
         padding-bottom: 70px;
     }
 
+    .about__body::before {
+        content: none;
+    }
+
     .about__content-title::before {
         margin-bottom: 16px;
     }
@@ -830,3 +847,12 @@ h6 {
         /* grid-template-columns: repeat(1, 1fr); */
     }
 }
+
+/* ---MAP--------- */
+.map {
+    padding-bottom: 23.44%;
+}
+
+.map__image {}
+
+/* ---FOOTER--------- */
