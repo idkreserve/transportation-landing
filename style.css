@@ -548,6 +548,7 @@ h6 {
     top: 10px; */
     align-items: flex-end;
     z-index: 1;
+    column-gap: 116px;
 }
 
 @media (max-width: 1050px) {
@@ -560,7 +561,42 @@ h6 {
     .transport__slider .slider__controls {
         flex-direction: row-reverse;
     }
-    .transport__slider .slider__image {
+}
 
-    } 
+@media (max-width: 720px) {
+    .transport__body {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+    }
+    
+    .transport__content {
+        text-align: center;
+    }
+
+    .transport__slider .slider__controls {
+        column-gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .transport {
+        padding-block: 30px;
+    }
+
+    .transport__content-title::before {
+        margin-bottom: 16px;
+    }
+
+    .transport__content-title .content-title__title {
+        font-size: 26px;
+    }
+
+    .transport__content-title .content-title__text {
+        font-size: 16px;
+    }
+
+    .transport__button {
+        margin-top: 20px;
+    }
 }
