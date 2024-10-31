@@ -276,6 +276,8 @@ h6 {
 
 .main__transport {}
 
+.main__services {}
+
 .contacts {
     background-color: var(--color-gold);
 }
@@ -558,6 +560,7 @@ h6 {
         align-items: center;
         row-gap: 10px;
     }
+
     .transport__slider .slider__controls {
         flex-direction: row-reverse;
     }
@@ -569,7 +572,11 @@ h6 {
         align-items: center;
         row-gap: 50px;
     }
-    
+
+    .transport__body::before {
+        content: none;
+    }
+
     .transport__content {
         text-align: center;
     }
@@ -598,5 +605,80 @@ h6 {
 
     .transport__button {
         margin-top: 20px;
+    }
+}
+
+/* ---SERVICES--------- */
+.services {
+    padding-block: 120px;
+}
+
+.services__container {}
+
+.services__body {}
+
+.services__content-title {}
+
+.services__content-title:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.services__grid {}
+
+.grid-services {}
+
+.grid-services__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-services__item {
+}
+
+.grid-services__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 23px;
+    background-color: var(--color-dark-alternative);
+    padding-top: 55px;
+    padding-bottom: 35px;
+    min-height: 180px;
+}
+
+.grid-services__card_active {
+    background-color: var(--color-gold);
+    padding-top: 35px;
+    padding-bottom: 15px;
+}
+
+.grid-services__card_active .grid-services__image {
+    background-color: var(--color-light);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.grid-services__title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 720px) {
+    .grid-services__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        padding-block: 30px;
+    }
+}
+
+@media (max-width: 327px) {
+    .grid-services__list {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10px;
     }
 }
